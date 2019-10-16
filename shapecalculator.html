@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html> 
+<head>
+	<title>Shape Calculator</title>
+	<link rel="shortcut icon" href="images/logo_circle.png"/>
+
+<!------------------------------------------------------css link-------------------------------------------------------------->	
+	<link rel="stylesheet" href="include/style.css">
+	<link rel="stylesheet" href="include/bootstrap.css">
+	
+<!-------------------------------------------------------js link-------------------------------------------------------------->	
+	<script src="include/java.js"></script>	
+</head>
+
+<body>
+<div id="container">
+	<div id="head"> 
+		<h1><b>Shape Calculator</b></h1>
+	</div>
+	<div id="prefix"> 
+		<p>Presented by Bombay<span style="color:#00ccff;">Works</span></p>
+	</div>
+</div>
+<div id="body1">
+	<form id="form1">
+	  <u><h3>Please select the shape to check it's area : </h3></u><br>
+	
+	
+	<div>
+		
+<!------------------------------------------------------circle----------------------------------------------------------------------->
+		<input type="radio" id="circle" name="shape" value="circle" onclick="shapeCalculator();">
+		<label for="circle">Circle <span><img src="images/circle.JPG" alt="" class="img-responsive" style="height:20px;width:20px;"></span></label><br>
+		
+	<!------------------------------------------------Enter Values----------------------------------------------------------->	
+		<form class="form-horizontal" id="form2">
+		  <div class="form-group col-md-6"> 
+			<label for="dc" class="col-md-6" style="float:left;">Enter diameter of a circle :  </label>
+			<div class="col-md-4" style="float:left;"> 
+				<input type="text" class="form-control" id="dc" name="dc">
+			</div>
+			<div class="col-md-2" style="float:left;">
+				<button class="btn btn-info" onclick="circleArea();">Submit</button>
+		    </div>
+		  </div>
+		  <br><br>
+		  <div class="form-group col-md-6"> 
+			<label for="ac" class="col-md-6" style="float:left;">Area of Circle is :  </label>
+			<div class="col-md-6" style="float:left;"> 
+				<input type="text" class="form-control" readonly="true" id="ac" name="ac">
+			</div>
+		  </div>
+		</form><br>	
+		
+<!------------------------------------------------------ellipse----------------------------------------------------------------------->
+		<input type="radio" id="ellipse" name="shape" value="ellipse" onclick="shapeCalculator();">
+		<label for="ellipse">Ellipse<span><img src="images/ellipse.gif" alt="" class="img-responsive" style="height:20px;width:30px;"></span></label><br>
+		
+	<!------------------------------------------------Enter Values----------------------------------------------------------->	
+		<form class="form-horizontal" id="form3">
+		  <div class="form-group col-md-12"> 
+			<label for="he" class="col-md-3" style="float:left;">Enter height of an ellipse :  </label>
+			<div class="col-md-2" style="float:left;"> 
+				<input type="text" class="form-control" id="he" name="he">
+			</div>
+			<label for="we" class="col-md-3" style="float:left;">Enter width of an ellipse :  </label>
+			<div class="col-md-2" style="float:left;"> 
+				<input type="text" class="form-control" id="we" name="we">
+			</div>
+			<div class="col-md-2" style="float:left;">
+				<button class="btn btn-primary" onclick="ellipseArea();">Submit</button>
+		    </div>
+		  </div>
+		  <br><br>
+		  <div class="form-group col-md-6"> 
+			<label for="ae" class="col-md-6" style="float:left;">Area of Ellipse is :  </label>
+			<div class="col-md-6" style="float:left;"> 
+				<input type="text" class="form-control" readonly="true" id="ae" name="ae">
+			</div>
+		  </div>
+		</form><br>	
+<!------------------------------------------------------square------------------------------------------------------------------------>
+		<input type="radio" id="square" name="shape" value="square" onclick="shapeCalculator();">
+		<label for="square">Square <span><img src="images/square.png" alt="" class="img-responsive" style="height:20px;width:20px;"></span></label><br>
+		
+	<!------------------------------------------------Enter Values----------------------------------------------------------->	
+		<form class="form-horizontal" id="form4">
+		  <div class="form-group col-md-6"> 
+			<label for="ws" class="col-md-6" style="float:left;">Enter Width of a square :  </label>
+			<div class="col-md-4" style="float:left;"> 
+				<input type="text" class="form-control" id="ws" name="ws">
+			</div>
+			<div class="col-md-2" style="float:left;">
+				<button class="btn btn-danger" onclick="squareArea();">Submit</button>
+		    </div>
+		  </div>
+		  <br><br>
+		  <div class="form-group col-md-6"> 
+			<label for="as" class="col-md-6" style="float:left;">Area of Square is :  </label>
+			<div class="col-md-6" style="float:left;"> 
+				<input type="text" class="form-control" readonly="true" id="as" name="as">
+			</div>
+		  </div>
+		</form><br>	
+<!------------------------------------------------------rectangle--------------------------------------------------------------------->	
+
+	
+		<input type="radio" id="rectangle" name="shape" value="rectangle" onclick="shapeCalculator();">
+		<label for="rectangle">Rectangle <span><img src="images/rectangle.png" alt="" class="img-responsive" style="height:20px;width:30px;"></span></label><br>
+		
+		
+	<!--------------------------------------------------Enter Values------------------------------------------------------------------>	
+		<form class="form-horizontal" id="form5">
+		  <div class="form-group col-md-12"> 
+			<label for="hr" class="col-md-3" style="float:left;">Enter height of an rectangle :  </label>
+			<div class="col-md-2" style="float:left;" > 
+				<input type="text" class="form-control" id="hr" name="hr">
+			</div>
+			<label for="wr class="col-md-3" style="float:left;">Enter width of an rectangle :  </label>
+			<div class="col-md-2" style="float:left;"> 
+				<input type="text" class="form-control" id="wr" name="wr">
+			</div>
+			<div class="col-md-2" style="float:left;">
+				<button class="btn btn-info" onclick="rectangleArea();">Submit</button>
+		    </div>
+		  </div>
+		  <br><br>
+		  <div class="form-group col-md-6"> 
+			<label for="ar" class="col-md-6" style="float:left;">Area of Rectangle is :  </label>
+			<div class="col-md-6" style="float:left;"> 
+				<input type="text" class="form-control" readonly="true" id="ar" name="ar">
+			</div>
+		  </div>
+		</form><br>	
+		
+		
+<!-------------------------------------------------------------------------------------------------------------------------------------->
+	  </div>
+	  <br>
+	</form>
+</div>
+</body>
+</html>
+
+
+
+
+
+
